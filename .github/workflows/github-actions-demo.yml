@@ -35,11 +35,11 @@ jobs:
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
           docker push garifullin2000/test-vue-build-nginx
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.2
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # - name: Set up SSH
+      #   uses: webfactory/ssh-agent@v0.5.2
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Connect to local machine
-        run: |
-          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'echo "Hello from GitHub Actions!"'
+      # - name: Connect to local machine
+      #   run: |
+      #     ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'echo "Hello from GitHub Actions!"'
