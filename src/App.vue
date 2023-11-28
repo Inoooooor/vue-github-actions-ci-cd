@@ -14,7 +14,7 @@ import TheWelcome from "./components/TheWelcome.vue"
     />
 
     <div class="wrapper">
-      <HelloWorld msg="AINUR BOIIIII!!!!" />
+      <HelloWorld msg="connection test" />
     </div>
   </header>
 
