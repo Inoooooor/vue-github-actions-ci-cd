@@ -28,5 +28,9 @@ jobs:
       - name: Unit tests
         run: npm run test:unit
 
-      - name: Unit tests
-        run: npm run test:unit
+      - name: Build and push image
+        run: |
+          docker build -t test-vue-build-nginx .
+          docker tag test-vue-build-nginx garifullin2000/test-vue-build-nginx
+          docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_PASSWORD }}
+          docker push garifullin2000/test-vue-build-nginx
