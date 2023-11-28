@@ -2,7 +2,7 @@ name: Ainur Bruh Actions
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Ainur-Actions-Test:
+  Ainur-Actions-Test-Job:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
