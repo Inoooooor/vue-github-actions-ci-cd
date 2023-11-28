@@ -1,5 +1,9 @@
 name: Ainur Bruh Actions
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
   Ainur-Actions-Test-Job:
     runs-on: ubuntu-latest
