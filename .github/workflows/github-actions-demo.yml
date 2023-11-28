@@ -13,13 +13,20 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+
       - name: Setup Node JS
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
         run: npm install
+
       - name: Build project
         run: npm run build
+
       - name: Unit tests
         run: npm run test:unit
+
+      - name: TEST SECRET
+        run: echo ${{ secrets.TEST_SECRET }}
