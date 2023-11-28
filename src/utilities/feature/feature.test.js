@@ -6,6 +6,6 @@ describe("minus", () => {
   })
 
   test("Корректное значение", () => {
-    expect(minus(0, 0)).toBe(2)
+    expect(minus(0, 0)).toBe(0)
   })
 })
