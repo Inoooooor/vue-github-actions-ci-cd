@@ -6,6 +6,6 @@ describe("sum", () => {
   })
 
   test("Корректное значение", () => {
-    expect(sum(0, 0)).toBe(0)
+    expect(sum(0, 0)).toBe(1)
   })
 })
